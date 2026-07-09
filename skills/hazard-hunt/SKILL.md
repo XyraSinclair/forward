@@ -68,7 +68,7 @@ churn (`git log --stat`), and the intent ledger's load-bearing paths.
 Persist statistics to `.forward/hunt.jsonl`, one JSON object per probe:
 
 ```json
-{"ts":"2026-07-09T12:00:00Z","area":"ingest/dedup","lens":"error-paths","finds":2,"issues":["half-written batch on SIGTERM","retry drops idempotency key"]}
+{"ts":"2026-07-09T12:00:00Z","area":"ingest/dedup","lens":"error-paths","finds":2,"issues":["half-written batch on SIGTERM","retry drops idempotency key"],"head":"abc1234"}
 ```
 
 Cumulative per-area state is derived by replay, so past sessions' spend
