@@ -6,9 +6,9 @@ description: Run one Drive Forward cycle — orient on the project's intent, int
 # Forward — the drive cycle
 
 You are running one cycle of Drive Forward: conscientious, safe, measured
-progress on this codebase. Read `PRINCIPLES.md` (it ships alongside this
-skill) if you haven't internalized it; every phase below is an application
-of it.
+progress on this codebase. Read `PRINCIPLES.md` if you haven't internalized
+it — it lives alongside this SKILL.md (project installs) or at the Forward
+repo root (plugin/checkout); every phase below is an application of it.
 
 State lives in `.forward/` at the repo root (create it if absent):
 

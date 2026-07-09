@@ -41,9 +41,10 @@ ever gets. If no human is available, self-appraise conservatively, mark
 
 ## Feeding back
 
-- **Stopping threshold**: per area, `V = median(worth_probes) / find` from
-  its ledger history. High-worth areas earn longer hunts (silence threshold
-  `3·V` grows); persistently shrug-rated areas get released sooner.
+- **Stopping threshold**: per area, `V` = total `worth_probes` returned by
+  the area's appraised changes ÷ total finds those changes addressed —
+  probes of value per find. High-worth areas earn longer hunts (silence
+  threshold `3·V` grows); persistently shrug-rated areas get released sooner.
 - **Direction weights**: sum worth by dimension (depth/breadth/reach/...).
   A dimension whose changes keep landing "loved" is where the next
   autonomous cycle defaults; a dimension the user keeps shrugging at is

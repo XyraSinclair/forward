@@ -23,7 +23,7 @@ mkdir -p "$dest"
 for skill in "$here"/skills/*/; do
   name="$(basename "$skill")"
   mkdir -p "$dest/$name"
-  cp "$skill/SKILL.md" "$dest/$name/SKILL.md"
+  cp -R "$skill/." "$dest/$name/"   # whole dir: SKILL.md + any reference files
   echo "installed $name -> $dest/$name"
 done
 

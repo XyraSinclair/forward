@@ -1,0 +1,10 @@
+{"ts":"2026-07-09T10:30:00Z","area":"skills/forward","lens":"correctness","finds":1,"issues":["PRINCIPLES.md 'ships alongside' claim false under plugin/checkout layout"],"head":"ecb4c6e"}
+{"ts":"2026-07-09T10:31:00Z","area":"skills/worth-ledger","lens":"invariants","finds":1,"issues":["V calibration formula ill-defined (median(worth_probes)/find)"],"head":"ecb4c6e"}
+{"ts":"2026-07-09T10:32:00Z","area":"install","lens":"error-paths","finds":1,"issues":["install.sh copies only SKILL.md; future reference files silently dropped"],"head":"ecb4c6e"}
+{"ts":"2026-07-09T10:33:00Z","area":"docs","lens":"dead-code","finds":1,"issues":["docs/ledger-schema.md orphaned, zero inbound links"],"head":"ecb4c6e"}
+{"ts":"2026-07-09T10:35:00Z","area":"cross-refs","lens":"duplication","finds":1,"issues":["probe tooling itself unreliable: rtk-mangled grep census reported phantom links; raw grep disagreed — probes need integrity discipline"],"head":"ecb4c6e"}
+{"ts":"2026-07-09T10:38:00Z","area":"principles-math","lens":"correctness","finds":0,"issues":[],"head":"ecb4c6e"}
+{"ts":"2026-07-09T10:40:00Z","area":"skills/hazard-hunt","lens":"invariants","finds":0,"issues":[],"head":"ecb4c6e"}
+{"ts":"2026-07-09T10:42:00Z","area":"skills/intent-ledger+dimension-interview","lens":"drift","finds":0,"issues":[],"head":"ecb4c6e"}
+{"ts":"2026-07-09T10:44:00Z","area":"skills/model-sentiment+safe-scope+diamond-polish","lens":"drift","finds":0,"issues":[],"head":"ecb4c6e"}
+{"ts":"2026-07-09T10:46:00Z","area":"README+plugin","lens":"correctness","finds":0,"issues":[],"head":"ecb4c6e"}

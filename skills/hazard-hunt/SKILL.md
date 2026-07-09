@@ -44,6 +44,13 @@ worth about three probes of effort).
   mistake in sibling modules. Clusters are found by following the first
   member home.
 
+**Probe integrity.** Silence only counts from a trusted instrument. A probe
+whose tooling is suspect — a grep that might have been rewritten, a check
+that collapses "error" and "no match" into one exit path, a sample that
+didn't actually reach ground truth — counts as *no probe at all*, not as a
+clean one. When a result surprises you toward "clean", re-run it through the
+rawest instrument available before letting it advance the silence clock.
+
 Never stop because you are bored, because the list is long, or because you
 "covered" the files. Stop only on silence or on an explicit budget ceiling —
 and if a budget ends the hunt early, say so: report which areas were released

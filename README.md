@@ -63,8 +63,9 @@ Then, in a Claude Code session inside your project:
 ```
 
 State accumulates in `.forward/` at your repo root (intent ledger, hunt
-statistics, worth ledger, cycle log). Commit it — it is the project's memory,
-and each cycle makes the next one cheaper and sharper.
+statistics, worth ledger, cycle log — schema in
+[docs/ledger-schema.md](docs/ledger-schema.md)). Commit it — it is the
+project's memory, and each cycle makes the next one cheaper and sharper.
 
 ## Hard rails
 
