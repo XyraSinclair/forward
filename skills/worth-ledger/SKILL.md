@@ -14,12 +14,17 @@ answer to "is this project still paying for attention?"
 Lives at `.forward/worth.jsonl`, one JSON object per appraised change or batch:
 
 ```json
-{"ts":"2026-07-09","change":"idempotent ingest retries","commits":["abc123"],"probes_spent":9,"verdict":"loved","worth_probes":40,"note":"user: 'this was the thing silently corrupting batches'"}
+{"ts":"2026-07-09","change":"idempotent ingest retries","commits":["abc123"],"area":"ingest/retry","finds_addressed":2,"probes_spent":9,"verdict":"loved","worth_probes":40,"note":"user: 'this was the thing silently corrupting batches'"}
 ```
 
 `worth_probes` denominates value in the same unit as spend (probes ≈ one
 focused attention-unit), so value-per-token is a dimensionless ratio you can
-compare across areas, cycles, and projects.
+compare across areas, cycles, and projects. `area` and `finds_addressed`
+link each appraisal back to the hunt ledger — without them the calibration
+below is not computable, only narratable. When only a verdict exists (no
+elicited magnitude), use the default anchors — disliked `0`, shrug `1`,
+fine `3`, loved `9` — and record that anchors were used; an elicited worth
+overrides anchors and records its rationale in `note`.
 
 ## Eliciting from the user
 
@@ -41,9 +46,9 @@ ever gets. If no human is available, self-appraise conservatively, mark
 
 ## Feeding back
 
-- **Stopping threshold**: per area, `V` = total `worth_probes` returned by
-  the area's appraised changes ÷ total finds those changes addressed —
-  probes of value per find. High-worth areas earn longer hunts (silence
+- **Stopping threshold**: per area, `V = Σ worth_probes / Σ finds_addressed`
+  over that area's records — probes of value per find, computable by replay
+  with no interpretation. High-worth areas earn longer hunts (silence
   threshold `3·V` grows); persistently shrug-rated areas get released sooner.
 - **Direction weights**: sum worth by dimension (depth/breadth/reach/...).
   A dimension whose changes keep landing "loved" is where the next

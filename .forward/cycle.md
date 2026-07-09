@@ -53,3 +53,70 @@ Workflow script.
 **Shipping gate.** Do I feel deeply good about everything? Yes — with one
 named residue: silence is not yet statistically earned anywhere; this is a
 day-one repo and the ledger says so out loud. Nothing known-broken ships.
+
+### Corrections — 2026-07-09, after independent audit (3 judges: 2× Claude fable fresh sessions, 1× Codex gpt-5.6-sol)
+
+Cycle 1's claims corrected, per the audit (raw reports:
+software-evaluation repo, evaluations/forward-cycle1-20260709/judges/):
+
+- **Probe timestamps were fabricated** — every probe postdated the commit
+  recording it. Nulled same day; stamp-at-run rule added to hazard-hunt.
+- **The hunt was a coverage sweep, not a hunt**: one probe per area, zero
+  escalation probes after 5 finds — violating hazard-hunt's own
+  escalation-on-find doctrine. The "10 probes" were labels applied to work
+  at write-up, not measured units.
+- **"Silence 0–1 after fixes" overstated**: ledger replay gives exactly 0.
+- **Probe-integrity "discovery" had false provenance**: the failure class
+  pre-existed in the operator's RTK.md. Real value = the live instance +
+  exporting the doctrine into the portable suite. Worth downgraded
+  loved→fine, 10→5.
+- **Self-audit falsely cleared its own denominator**: `principles-math`
+  logged clean while the stopping rule carried a live economic
+  contradiction (the low-stakes 3-probe floor), found only by an
+  independent cross-vendor judge.
+- Process honesty grade from the adversarial audit: **C+** — real fixes,
+  real candor about truncation, fake measurement. The artifact verdict
+  from two independent judges: **A>B (post > pre) on every axis**, high /
+  0.86 confidence. Both are true; the gap between them is what cycle 2
+  closes.
+
+## Cycle 2 — 2026-07-09 (audit-driven)
+
+**Framing.** Cycle 2's finds came from outside: three independent judges
+(two model families) hunting the cycle-1 artifact and the cycle-1 process.
+External finds reset silence harder than internal ones — they are evidence
+about our lenses, not just our code.
+
+**Exit criterion.** Every verified judge find fixed or explicitly handled;
+ledgers schema-valid under a *mechanical* validator; no claim in .forward/
+that a replay contradicts. Ambition dial: conscientious-high, tightening.
+
+**Shipped.**
+- hazard-hunt: low-stakes floor removed — stakes enter only through V; the
+  one release rule is silence ≥ 3·V. "Provably low" softened to what the
+  math supports. Stamp-at-run timestamp rule.
+- worth-ledger + schema: V = Σworth_probes/Σfinds_addressed, computable by
+  replay; area/finds_addressed fields added; verdict anchors (0/1/3/9);
+  conservatism rule applied to our own ledger (two downgrades).
+- docs/ledger-schema.md rewritten: strictly-valid JSONL examples, closed
+  lens vocabulary (+drift, +spot-audit) with same-commit extension rule,
+  atomic-area rule, source attribution for external finds, pending-commits
+  rejection.
+- scripts/validate-ledgers.py: mechanical enforcement, wired into the
+  forward skill's Appraise step. Distinguishes no-ledgers from invalid.
+- README: plugin command namespacing (/forward:forward).
+- intent-ledger: "two sections" vs seven-headings drift fixed.
+- Ledgers conformed: compound areas atomized (flagged, not silent),
+  commits backfilled, cycle-2 judge finds appended with real timestamps
+  and per-judge source attribution.
+
+**Hunt statistics.** Cycle 2 external probes: 8 recorded passes, 12 finds
+across 7 areas (finds/probe ≈ 1.5 — higher than cycle 1's 0.5, exactly as
+the hazard principle predicts when fresh lenses arrive). Silence earned:
+still nowhere. Hot areas (.forward accounting, skills/hazard-hunt) now
+carry the largest V-weighted debt; per the one rule they need 3·V clean
+probes from here.
+
+**Next cycle's best candidate.** A cycle run by a *different* session/model
+end-to-end (hunter ≠ author) with stamp-at-run accounting — the only way to
+turn the C+ process grade into measurement that deserves its own ledger.

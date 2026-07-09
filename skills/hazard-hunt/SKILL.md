@@ -1,6 +1,6 @@
 ---
 name: hazard-hunt
-description: Hunt a codebase for issues (bugs, duplication, drift, inefficiency) under a statistical stopping rule — issues beget issues, and an area is only released after enough clean spend that the remaining rate is provably low. Use when hunting bugs, auditing an area, deciding whether to keep looking, or when someone asks "is this clean yet?"
+description: Hunt a codebase for issues (bugs, duplication, drift, inefficiency) under a statistical stopping rule — issues beget issues, and an area is only released after enough clean spend that the upper confidence bound on the remaining rate drops below its value threshold. Use when hunting bugs, auditing an area, deciding whether to keep looking, or when someone asks "is this clean yet?"
 ---
 
 # Hazard Hunt
@@ -26,17 +26,20 @@ The observed hazard for an area is `λ = finds / probes`.
 
 ## The stopping rule
 
-Let `V` = the value of an average issue in this area, denominated in probes
-(from the worth ledger if one exists; default `V = 3` — a typical issue is
-worth about three probes of effort).
+Let `V` = the value of an average issue in *this area*, denominated in
+probes (from the worth ledger if one exists; default `V = 3`). Stakes enter
+the rule **only through V**: a low-stakes area is one whose issues are worth
+little (set `V = 1` and say so in the ledger), a load-bearing area's issues
+are worth more (`V = 5+`). There is no separate low-stakes floor — an
+earlier draft had one, and it contradicted the economics below.
 
-- **Never-hit area** (finds = 0): release after `probes ≥ 3` clean probes for
-  low-stakes areas, `probes ≥ 3·V` for load-bearing ones. (Rule of three:
-  after `t` clean probes the 95% upper bound on the rate is `3/t`; hunting
-  pays while `λ·V > 1`.)
-- **Hit area** (finds > 0): release only when `silence ≥ 3·V`. Every find
-  resets `silence` to zero. Yes, this means a hot area can absorb many
-  probes. That is the point — it is the areas that keep yielding that
+- **The one rule**: release an area only when consecutive clean probes reach
+  `3·V` — for never-hit areas that means total probes, for hit areas
+  `silence` since the last find. (Rule of three: after `t` clean probes the
+  95% upper bound on the rate is `3/t`; hunting pays while `λ·V > 1`, so
+  release requires `3/t < 1/V`, i.e. `t > 3V`.)
+- Every find resets `silence` to zero. Yes, this means a hot area can absorb
+  many probes. That is the point — it is the areas that keep yielding that
   deserve the spend.
 - **Escalation on find**: a find doesn't just reset the clock — it widens
   the neighborhood. Immediately probe: the same file end to end; the same

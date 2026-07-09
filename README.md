@@ -62,6 +62,9 @@ Then, in a Claude Code session inside your project:
 /forward
 ```
 
+(Installed as a *plugin* rather than via install.sh, skills are namespaced:
+the command is `/forward:forward`.)
+
 State accumulates in `.forward/` at your repo root (intent ledger, hunt
 statistics, worth ledger, cycle log — schema in
 [docs/ledger-schema.md](docs/ledger-schema.md)). Commit it — it is the

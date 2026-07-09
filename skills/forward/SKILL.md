@@ -86,6 +86,9 @@ or resolved.
 
 - Run the `worth-ledger` skill: summarize what shipped, elicit (or estimate,
   if autonomous) what it was worth, record it against tokens spent.
+- Validate the ledgers mechanically (`scripts/validate-ledgers.py` from the
+  Forward repo) — schema rules that are only preached get violated within a
+  cycle; cycle 1 proved it.
 - Update `intent.md` with anything learned about intent this cycle
   (dedup, recency-weight, record supersessions).
 - Close `cycle.md` with: what shipped, what the hunt statistics say about

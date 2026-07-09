@@ -10,9 +10,10 @@ prompts, voice notes, corrections mid-task, offhand asides, reversals. Left
 uncompiled, this stream is noise — agents rediscover intent from scratch every
 session, or worse, act on a stale reading. The ledger compiles the stream.
 
-Lives at `.forward/intent.md`. Two sections: **Current Intent** (the compiled
-view agents actually read) and **Supersessions** (what was overruled, by what,
-when).
+Lives at `.forward/intent.md`. Two concerns: the **compiled current view**
+agents actually read (Mission, Flavor, Load-bearing intents, Current
+directions, Limitations, Open questions — the headings under Format below)
+and the **supersession trail** (what was overruled, by what, when).
 
 ## Compilation rules
 
