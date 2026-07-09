@@ -83,6 +83,11 @@ Persist statistics to `.forward/hunt.jsonl`, one JSON object per probe:
 {"ts":"2026-07-09T12:00:00Z","area":"ingest/dedup","lens":"error-paths","finds":2,"issues":["half-written batch on SIGTERM","retry drops idempotency key"],"head":"abc1234"}
 ```
 
+Stamp each probe **when it runs**, not when the cycle is written up. A
+reconstructed timestamp is a false receipt; if the real time wasn't
+captured, write `"ts": null` and say so — an honest null outranks a neat
+fiction.
+
 Cumulative per-area state is derived by replay, so past sessions' spend
 counts toward today's silence thresholds. Before hunting, replay the ledger:
 an area that earned its silence last week and hasn't changed since
