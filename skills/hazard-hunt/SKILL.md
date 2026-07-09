@@ -57,7 +57,12 @@ redundant: correctness / edge cases; duplication (same logic twice, drifted
 copies); dead code and stale docs; efficiency (needless allocation, O(n²)
 lurking, chatty IO); interface sharpness (leaky abstractions, boolean
 parameters, stringly-typed seams); invariants that are assumed but never
-checked; error paths (what happens when this fails halfway?).
+checked; error paths (what happens when this fails halfway?); and the
+**empirical spot-audit** — pull N real records/outputs and verify them
+against ground truth by hand (does the stored tweet match the live URL? does
+the cache entry match a fresh compute?). Data poisoning and silent drift are
+invisible to code review; only fresh empirical sampling finds them, and a
+single failed sample is a find that resets the clock like any other.
 
 Seed the area priority from: open bugs (strongest signal — an open bug marks
 a hot area by definition), the unease map from `model-sentiment`, recent

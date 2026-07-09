@@ -27,6 +27,11 @@ confabulation), answer honestly, in first person:
   and knowing what NOT to touch is half of safety.
 - **Desire**: If I could change one structural thing, what would it be? What
   is this code *trying* to become?
+- **Weirdness**: What still feels weird? This is the sharpest probe of the
+  set — weirdness noticed is a bug suspected. Anything you can't explain
+  cleanly ("why does this retry twice?", "why is this field nullable?") goes
+  straight to the hunt as a high-priority area, and stays there until it is
+  either explained or fixed.
 
 Rules of honesty: no hedging into "it depends"; commit to a reaction, then
 give the reason. Distinguish "this is wrong" from "this is not how I'd do
@@ -57,3 +62,12 @@ Record the result in the cycle log as a ranked map:
 Feed rank 1–N straight into hazard-hunt's area priority. Track calibration
 over time: when the hunt confirms or refutes an unease entry, note it — if
 unease keeps pointing at clean code, discount it; in practice it rarely does.
+
+## The shipping gate
+
+Before anything deploys, releases, or closes a cycle, ask the question
+directly and answer it in writing: **"Do I feel deeply good about
+everything?"** Not "did the checks pass" — *feel*. A yes must be honest and
+unhedged. Anything less than yes names the residual unease specifically, and
+that residue either gets resolved now or gets reported as a known handle —
+never swallowed.

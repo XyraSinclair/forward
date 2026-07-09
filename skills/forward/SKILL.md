@@ -19,6 +19,13 @@ State lives in `.forward/` at the repo root (create it if absent):
 
 ## The cycle
 
+A cycle is a **tranche**: ambitious but cogent, and it *closes*. At the end
+of Orient, write its exit criterion — one closable sentence ("done means X
+holds") — into `cycle.md`, and set the **ambition dial** for the cycle
+(tightening pass ↔ maximally ambitious) from the intent ledger's appetite;
+default to conscientious-high. Never trail off mid-tranche: a cycle ends
+squared away or it reports exactly what handle it left.
+
 ### 1. Orient (open mode)
 
 Build the frame before touching anything:
@@ -69,7 +76,11 @@ touch — leave it canonical, not just patched. Hard rails:
 ### 5. Verify
 
 Exercise the changes end-to-end — run the affected flows, not just the test
-suite. A change that wasn't observed working is not done.
+suite. Verify empirically against ground truth on real data where data is
+involved (spot-audit N real records, freshly). A change that wasn't observed
+working is not done. Then apply model-sentiment's shipping gate: "do I feel
+deeply good about everything?" — answered in writing, residual unease named
+or resolved.
 
 ### 6. Appraise & consolidate
 
